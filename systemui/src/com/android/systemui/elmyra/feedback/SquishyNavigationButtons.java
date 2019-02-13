@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.android.systemui.SysUiServiceProvider;
 import com.android.systemui.keyguard.KeyguardViewMediator;
+import com.android.systemui.navigation.Navigator;
 import com.android.systemui.statusbar.phone.NavigationBarView;
 
 import java.util.Arrays;
@@ -31,7 +32,7 @@ public class SquishyNavigationButtons extends NavigationBarEffect {
         mPm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
     }
 
-    protected List<FeedbackEffect> findFeedbackEffects(NavigationBarView navigationBarView) {
+    protected List<FeedbackEffect> findFeedbackEffects(Navigator navigationBarView) {
         int i;
         mViewController.clearViews();
         List views = navigationBarView.getBackButton().getViews();
